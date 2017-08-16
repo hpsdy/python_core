@@ -15,7 +15,7 @@ while True:
         break
     sock.send(data.encode())
     data = sock.recv(bufsize)
-    print('ret data type:%s' % data)
+    print('ret data type:%s' % type(data))
     if not data:
         break
     print(data)
