@@ -14,4 +14,5 @@ while True:
     sock.sendto(data.encode(),addr)
     data,addr = sock.recvfrom(bufsize)
     print('client addr:',addr)
+    print('data',data.decode())
 sock.close()
