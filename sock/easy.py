@@ -10,9 +10,11 @@ addr = (host,port)
 sock = socket(AF_INET,SOCK_STREAM)
 sock.bind(addr)
 sock.listen(max)
+print('server:',sock)
 while True:
     print('waiting alient in')
     cli,addr = sock.accept()
+    print('client:',cli,' cli_addr:',addr)
     while True:
         data = cli.recv(bufsize)
         print('data type:%s' % type(data))
