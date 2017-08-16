@@ -18,7 +18,7 @@ while True:
         print('data type:%s' % type(data))
         if not data:
             break
-        str = ('[%s] %s' % (time.ctime(),data)).encode()
+        str = ('[%s] %s' % (time.ctime(),data.decode())).encode()
         print(str)
         cli.send(str)
     cli.close()
