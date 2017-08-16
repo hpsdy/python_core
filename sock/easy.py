@@ -16,8 +16,9 @@ while True:
     cli,addr = sock.accept()
     while True:
         data = cli.recv(bufsize)
+        print('data type:%s' % type(data))
         if not data:
             break
-        cli.send('[%s] %s' % (time.ctime(),data))
+        cli.send('[%s] %s' % (time.ctime().encode(),data))
     cli.close()
 sock.close()
