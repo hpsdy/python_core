@@ -19,6 +19,6 @@ while True:
         print('data type:%s' % type(data))
         if not data:
             break
-        cli.send('[%s] %s' % (time.ctime().encode(),data))
+        cli.send(('[%s] %s' % (time.ctime(),data)).encode())
     cli.close()
 sock.close()
