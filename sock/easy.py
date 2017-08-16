@@ -12,13 +12,13 @@ sock.bind(addr)
 sock.listen(max)
 while True:
     print('waiting alient in')
-    time.sleep(10)
     cli,addr = sock.accept()
     while True:
         data = cli.recv(bufsize)
         print('data type:%s' % type(data))
         if not data:
             break
-        cli.send(('[%s] %s' % (time.ctime(),data)).encode())
+        str = ('[%s] %s' % (time.ctime(),data)).encode()
+        cli.send(str)
     cli.close()
 sock.close()
