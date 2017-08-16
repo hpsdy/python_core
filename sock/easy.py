@@ -19,6 +19,7 @@ while True:
         if not data:
             break
         str = ('[%s] %s' % (time.ctime(),data)).encode()
+        print(str)
         cli.send(str)
     cli.close()
 sock.close()
