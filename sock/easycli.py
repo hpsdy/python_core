@@ -10,10 +10,10 @@ sock = socket(AF_INET,SOCK_STREAM)
 sock.connect(addr)
 while True:
     data = input('>>')
-    print('data type:%s' % data)
+    print('data type:%s' % type(data))
     if not data:
         break
-    sock.send(data)
+    sock.send(data.encode())
     data = sock.recv(bufsize)
     print('ret data type:%s' % data)
     if not data:
