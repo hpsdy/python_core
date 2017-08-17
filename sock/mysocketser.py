@@ -8,7 +8,7 @@ addr = (host,port)
 
 class mySocketSer(SRH):
     def handle(self):
-        print('...connect from %s' % self.client_address)
+        print('...connect from ',self.client_address)
         data = self.rfile.readline()
         self.wfile.write(('[%s] %s' %(ctime(),data.decode())).encode())
 
