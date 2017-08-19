@@ -19,7 +19,7 @@ while True:
     if data:
         sock.sendto(data.encode(),addr)
     while True:
-        data = sock.recvfrom(bufsize)
+        data,addr = sock.recvfrom(bufsize)
         if data:
             print('return data:%s' % data.decode())
             break
