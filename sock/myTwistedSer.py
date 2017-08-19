@@ -8,7 +8,7 @@ class TsSer(protocol.Protocol):
         clnt = self.clnt = self.transport.getPeer().host
         print('...connect from:',clnt)
     def dataReceived(self,data):
-        print('data type:%s',type(data))
+        print('data type:',type(data))
         self.transport.write(('[%s] %s' % (ctime(),data.decode())).encode())
 
 factory = protocol.Factory()
