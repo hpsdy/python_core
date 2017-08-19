@@ -20,7 +20,7 @@ print('cur server name:',sock.getsockname(),',remote server name:',sock.getpeern
 while True:
     try:
         data = input('>>')
-        if not data:
+        if data:
             sock.send(data.encode())
             data = sock.recv(bufsize)
             print('return data:%s' % data.decode())
