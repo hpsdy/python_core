@@ -1,5 +1,6 @@
 #!/bin/env python3
 #-*- coding:utf-8 -*-
+
 from socket import *
 import time
 host = ''
