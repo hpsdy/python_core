@@ -4,7 +4,6 @@ from socket import *
 import traceback
 import sys
 host = 'localhost'
-
 port = 8888
 bufsize = 1024
 argv = sys.argv
