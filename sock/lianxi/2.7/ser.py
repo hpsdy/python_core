@@ -43,6 +43,7 @@ while True:
             ep.register(nfileno, select.EPOLLIN)
             msg[nfileno] = queue.Queue()
             sockarr[nfileno] = nsock
+            print('***新连接***')
         elif even == select.EPOLLIN:
             print('===输入===')
             info = bsock.recv(bufsize)
@@ -62,7 +63,8 @@ while True:
                     fnmap[xfileno] = name
             else:
                 msg[xfileno].put(info)
-                ep.modify(xfileno, select.EPOLLOUT)
+            ep.modify(xfileno, select.EPOLLOUT)
+            print('***输入***')
         elif even == select.EPOLLOUT:
             print('===输出===')
             try:
@@ -89,6 +91,7 @@ while True:
                 print('exception:', e)
             finally:
                 ep.modify(xfileno,select.EPOLLIN)
+            print('***输出***')
         elif even == select.EPOLLHUP:
             print('===断开===')
             client = sockarr[xfileno].getpeername()
@@ -101,6 +104,7 @@ while True:
                 del fnmap[xfileno]
                 if name in group and xfileno in group[name]:
                     group[name].remove(xfileno)
+            print('***断开***')
 
 ep.unregister(fileno)
 ep.close()
