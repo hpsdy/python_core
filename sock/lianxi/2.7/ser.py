@@ -4,7 +4,6 @@ from socket import *
 from time import ctime
 import select, queue
 import re
-
 host = 'localhost'
 port = 7878
 addr = (host, port)
@@ -82,10 +81,10 @@ while True:
                                 continue
                             else:
                                 tsock = sockarr[x]
-                                tsock.sendall(('[%s] coming %s' % (tsock.getpeername(), data.decode())).encode())
+                                tsock.sendall(('[%s] coming %s' % (tsock.getpeername(), data)).encode())
                     else:
                         tsock = sockarr[xfileno]
-                        tsock.sendall(('return data:[%s] %s' % (ctime(), data.decode())).encode())
+                        tsock.sendall(('return data:[%s] %s' % (ctime(), data)).encode())
             except Exception as e:
                 print('exception:', e)
             finally:
