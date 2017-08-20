@@ -79,7 +79,7 @@ while True:
                             continue
                         else:
                             tsock = sockarr[x]
-                            tsock.sendall(('[%s] coming %s' % (tsock.getpeername(), fnmap[xfileno])).encode())
+                            tsock.sendall(('[%s]: %s join %s \n' % (sock.getsockname(),bsock.getpeername(),fnmap[xfileno])).encode())
                 if data:
                     if xfileno in fnmap and fnmap[xfileno] in group:
                         for x in group[fnmap[xfileno]]:
@@ -87,7 +87,7 @@ while True:
                                 continue
                             else:
                                 tsock = sockarr[x]
-                                tsock.sendall(('[%s] coming %s' % (tsock.getpeername(), data)).encode())
+                                tsock.sendall(('[%s]: %s' % (bsock.getpeername(), data)).encode())
                     else:
                         tsock = sockarr[xfileno]
                         tsock.sendall(('return data:[%s] %s' % (ctime(), data)).encode())
