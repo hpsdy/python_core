@@ -4,6 +4,7 @@ from socket import *
 from time import ctime
 import select, queue
 import re
+import traceback
 host = 'localhost'
 port = 7878
 addr = (host, port)
@@ -89,6 +90,7 @@ while True:
                         tsock.sendall(('return data:[%s] %s' % (ctime(), data)).encode())
             except Exception as e:
                 print('exception:', e)
+                print('detail:',traceback.format_exc())
             finally:
                 ep.modify(xfileno,select.EPOLLIN)
             print('***输出***')
