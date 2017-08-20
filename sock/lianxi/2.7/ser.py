@@ -69,7 +69,10 @@ while True:
         elif even == select.EPOLLOUT:
             print('===输出===')
             try:
-                data = msg[xfileno].get(False)
+                try:
+                    data = msg[xfileno].get(False)
+                except Exception as e:
+                    data = None
                 if not data and xfileno in fnmap and fnmap[xfileno] in group:
                     for x in group[fnmap[xfileno]]:
                         if xfileno == x:
