@@ -17,10 +17,28 @@ to = user
 def mymetamultiparty():
     #meta = MIMEMultipart('alternative')
     meta = MIMEMultipart()
-    text = MIMEText(' ')
-def metaimg:
+    text = MIMEText('hello world\r\n','plain')
+    meta.attach(text)
+    html = MIMEText('<html><body><h1>haha</h1></body></html>','html')
+    meta.attach(html)
+    img = metaimg()
+    meta.attach(img)
+    return meta
+def metaimg():
+    fn = 'some.jpg'
+    f = open('./timg.jpg','rb')
+    data = f.read()
+    f.close()
+    email = MIMEImage(data,name=fn)
+    email.add_header('Content-Disposition','attachment;filename="%s"' % fn)
+    return email
+msg = mymetamultiparty()
+msg['From']=user
+msg['To']=to
+msg['Subject']='测试'
 #ret=sm.sendmail('1036474541@qq.com','1036474541@qq.com','''From:qinhan\r\nTo:qinhan\r\nSubject:hello world\r\n\r\nthis is a test mail''')
-#print(ret)
+ret=sm.sendmail('1036474541@qq.com','1036474541@qq.com',msg.as_string())
+print(ret)
 
 sm.quit()
 
