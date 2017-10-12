@@ -1,4 +1,3 @@
 #!/usr/bin/env python3
 #-*- coding:utf-8 -*-
-from two import w
-print(w)
+w = 100
