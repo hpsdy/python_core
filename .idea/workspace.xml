@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0474008-8733-46cb-826b-c261f47314f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/argv.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/text.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/cgi-bin/index.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/cgihttpd.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/wsgi/web.py" />
+    <list default="true" id="c0474008-8733-46cb-826b-c261f47314f4" name="Default" comment="commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/share/locale/zh_CN/LC_MESSAGES/text.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/share/locale/zh_CN/LC_MESSAGES/text.po" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +50,8 @@
       <file leaf-file-name="gettext.py" pinned="false" current-in-tab="true">
         <entry file="file://D:/python/Lib/gettext.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="348" column="27" lean-forward="false" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+            <state relative-caret-position="453">
+              <caret line="432" column="26" lean-forward="true" selection-start-line="432" selection-start-column="26" selection-end-line="432" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -545,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509437093202</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="commit">
+      <created>1510147581535</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1510147581535</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -947,8 +950,8 @@
     </entry>
     <entry file="file://D:/python/Lib/gettext.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="348" column="27" lean-forward="false" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+        <state relative-caret-position="453">
+          <caret line="432" column="26" lean-forward="true" selection-start-line="432" selection-start-column="26" selection-end-line="432" selection-end-column="26" />
           <folding />
         </state>
       </provider>
