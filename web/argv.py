@@ -1,4 +1,7 @@
 import sys
+from . import uparse
+print(uparse.a)
+'''
 
 p = sys.argv[1:]
 
@@ -34,3 +37,4 @@ class c(b):
 
 
 c()
+'''

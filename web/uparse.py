@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
+a=1000
+'''
 from urllib import request
 from urllib import parse
 
@@ -16,3 +18,5 @@ req = request.Request(url, data=data, headers=headers)
 print(req)
 fn = request.urlretrieve(req,filename='1.json')
 print(fn)
+
+'''
