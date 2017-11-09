@@ -25,7 +25,7 @@ SECRET_KEY = 'n%*32kn2tv%12dlv%*mnv56y2=q07#!3o1$pxpd_^jt+t=lg99'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['47.93.255.223','www.huposedeyue.cn']
 
 
 # Application definition
