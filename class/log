@@ -1,0 +1,11 @@
+WARNING:root:type:<class 'str'>,int:1231
+
+WARNING:root:type:<class 'str'>,int:qweqw
+WARNING:root:type:<class 'str'>,int:312
+WARNING:root:type:<class 'str'>,int:hhhh
+WARNING:root:type:<class 'str'>,int:hih
+WARNING:root:type:<class 'str'>,int:10
+WARNING:root:type:<class 'str'>,int:10
+WARNING:root:type:<class 'str'>,int:10
+WARNING:root:type:<class 'str'>,int:10
+WARNING:root:type:<class 'str'>,int:'10',o:10
